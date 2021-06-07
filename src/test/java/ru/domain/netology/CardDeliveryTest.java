@@ -45,8 +45,8 @@ public class CardDeliveryTest {
     @Test
     void shouldTestCardDelivery(){
         open("http://localhost:9999");
-        $(".input__control[placeholder=\"Город\"]").setValue("Москва");
-        $(".input__control[placeholder=\"Дата встречи\"]").setValue("11.06.2021");
+        $(".input__control[placeholder=\"Город\"]").setValue("Улан-Удэ");
+        $(".input__control[placeholder=\"Дата встречи\"]").setValue("10.06.2021");
         $(".input__control[name='name']").setValue("Иванов Иван");
         $(".input__control[name='phone']").setValue("+79261234567");
         $(".checkbox__box").click();
