@@ -28,12 +28,12 @@ public class CardDeliveryTest {
 
     @BeforeEach
     void setUp() {
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--disable-dev-shm-usage");
-//        options.addArguments("--no-sandbox");
-//        options.addArguments("--headless");
-//        driver = new ChromeDriver(options);
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
+      //  driver = new ChromeDriver();
     }
 
     @AfterEach
@@ -46,7 +46,7 @@ public class CardDeliveryTest {
     void shouldTestCardDelivery(){
         open("http://localhost:9999");
         $(".input__control[placeholder=\"Город\"]").setValue("Улан-Удэ");
-        $(".input__control[placeholder=\"Дата встречи\"]").setValue("10.06.2021");
+        $(".input__control[placeholder=\"Дата встречи\"]").setValue("13.06.2021");
         $(".input__control[name='name']").setValue("Иванов Иван");
         $(".input__control[name='phone']").setValue("+79261234567");
         $(".checkbox__box").click();
